@@ -1,0 +1,79 @@
+/*implementation of style to the texts of the HTML file*/
+h2, h3, h4 {
+    color: #330066;
+    font-family: "Consola", sans-serif; 
+}
+
+#titulo {
+    color: #330066;
+    font-family: "Consola", sans-serif; 
+    border: 7px purple inset;
+} 
+
+p {
+    color: black;
+    font-family: "Consola", sans-serif; 
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 150;
+} 
+
+body {
+    background-image: url('image/Fond.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+header, section, footer {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header #titulo {
+    text-align: center;
+    border: 7px purple inset;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #330066;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
+
+.visible {
+    display: block;
+  }
+  
+  #Playlists, #Resources, #Applications {
+    display: none;
+}

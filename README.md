@@ -26,5 +26,5 @@ We're a passionate team of developers and music lovers who believe that music an
 
 ## Authors
 
-Jesenia Bernal
-Harold Suarez
+- Jesenia Bernal
+- Harold Suarez
