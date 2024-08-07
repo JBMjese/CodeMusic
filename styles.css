@@ -10,14 +10,45 @@ h2, h3, h4 {
     border: 7px purple inset;
 } 
 
-p {
-    color: black;
-    font-family: "Consola", sans-serif; 
+#matachos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.description {
+    background-color: #d956e573; /* Color de fondo de la franja */
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Esconde el contenido que se desborda durante la animación */
+    animation: slideIn 1s ease-out; /* Aplica la animación de deslizamiento */
+    white-space: nowrap;
+    text-align: center;
+}
+
+.description p {
+    margin: 0;
+    display: inline-block;
+    font-family: "Consola", sans-serif;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+@keyframes slideIn{
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 html{
     scroll-behavior: smooth;
-    font-size: 150;
 } 
 
 body {
@@ -25,16 +56,23 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 header, section, footer {
     width: 80%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 header #titulo {
@@ -48,12 +86,37 @@ nav ul {
     display: flex;
     justify-content: space-around;
     padding: 0;
+    margin: 0;
 }
-
+/*
+Estilo de botones de Aplications, Playlist, Resources
+*/
 nav ul li a {
     text-decoration: none;
     color: #330066;
-    font-size: 1.2rem;
+    font-size: 25px;
+    background-color: #ae3397;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, font-size 0.3s ease;
+}
+/*
+Cambios al pasar el maouse por los botones, Aplications, Playlist, Resources
+- Color
+- Agranda el boton
+- Borde al lado y abajo
+- Agranda la letra
+*/
+nav ul li a:hover{
+    background-color: #4ca1cf;
+    transform: scale(1.1);
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.2);
+    font-size: 30px;
 }
 
 @media (max-width: 600px) {
@@ -74,6 +137,6 @@ nav ul li a {
     display: block;
   }
   
-  #Playlists, #Resources, #Applications {
+  .Playlists, .Resources, .Applications {
     display: none;
 }
